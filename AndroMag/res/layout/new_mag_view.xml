@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <EditText
+        android:id="@+id/EditNomMag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="17dp"
+        android:ems="10"
+        android:hint="@string/nom_mag"
+        android:inputType="text" >
+        <requestFocus />
+    </EditText>
+
+ <EditText
+     android:id="@+id/EditPrixMag"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_alignRight="@+id/EditNomMag"
+     android:layout_below="@+id/EditNomMag"
+     android:layout_toRightOf="@+id/checkBoxMaison"
+     android:ems="10"
+     android:inputType="numberSigned" />
+
+ <TextView
+     android:id="@+id/textViewPrix"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_alignBaseline="@+id/EditPrixMag"
+     android:layout_alignBottom="@+id/EditPrixMag"
+     android:layout_alignRight="@+id/checkBoxJardin"
+     android:layout_marginRight="19dp"
+     android:text="@string/prix" />    
+    <CheckBox
+        android:id="@+id/checkBoxMaison"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/EditNomMag"
+        android:layout_below="@+id/checkBoxMusique"
+        android:layout_marginLeft="15dp"
+        android:text="@string/maison" />  
+
+    <CheckBox
+        android:id="@+id/checkBoxJardin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonAnnulerMagazine"
+        android:layout_alignLeft="@+id/checkBoxMaison"
+        android:layout_marginBottom="66dp"
+        android:text="@string/jardin" />
+
+    <CheckBox
+        android:id="@+id/checkBoxMusique"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/checkBoxJardin"
+        android:layout_alignBottom="@+id/checkBoxJardin"
+        android:layout_alignRight="@+id/buttonValiderMagazine"
+        android:text="@string/musique" />
+
+    <CheckBox
+        android:id="@+id/checkBoxTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/checkBoxMaison"
+        android:layout_alignBottom="@+id/checkBoxMaison"
+        android:layout_alignLeft="@+id/checkBoxMusique"
+        android:text="@string/TV" />
+
+ <Button
+        android:id="@+id/buttonValiderMagazine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/buttonAnnulerMagazine"
+        android:layout_marginRight="18dp"
+        android:onClick="onValider"
+        android:text="@string/validerlemagazine" />
+     
+ <Button
+        android:id="@+id/buttonAnnulerMagazine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/checkBoxMaison"
+        android:layout_marginBottom="72dp"
+        android:onClick="onAnnuler"
+        android:text="@string/annuler" />
+
+ <TextView
+     android:id="@+id/textViewTheme"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_above="@+id/checkBoxJardin"
+     android:layout_alignLeft="@+id/EditNomMag"
+     android:layout_marginBottom="34dp"
+     android:text="@string/theme" />
+
+</RelativeLayout>
