@@ -10,7 +10,7 @@
     
     <string name="new_mag">Nouveau Magazine</string>
     <string name="name">Nom:</string>
-    <string name="nom_mag">Nom du magazine&#8230;&#8230;&#8230;</string>
+    <string name="nom_mag">Nom du magazine</string>
     <string name="prix">Prix:</string>
  
     <string name="rate">Niveau:</string>
@@ -18,6 +18,8 @@
     
     <string name="annuler">Annuler</string>
     <string name="valider">Valider</string>
+    
+    <string name="detail_mag">Détail magazine</string>
 
     <string name="title_activity_commentaire">CommentaireActivity</string>
     <string name="theme">Theme</string>

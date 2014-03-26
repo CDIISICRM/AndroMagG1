@@ -1,14 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  android:orientation="vertical"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent">
-  <TextView android:id="@+id/product_label"
-            android:layout_width="fill_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/nom_magazine"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dip"
+        android:textColor="#081272"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/prix_magazine"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dip"
+        android:textColor="#aff53d"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <ExpandableListView
+        android:id="@+id/expandableListComments"
+        android:layout_width="match_parent"
+        android:layout_height="301dp"
+        android:layout_weight="0.59" >
+    </ExpandableListView>
+
+    <LinearLayout
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/commenter"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:textSize="25dip"
-            android:textStyle="bold"
-            android:padding="10dip"
-            android:textColor="#ffffff"/>   
+            android:layout_marginLeft="20dp"
+            android:text="commenter" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="masquer" />
+    </LinearLayout>
+
 </LinearLayout>

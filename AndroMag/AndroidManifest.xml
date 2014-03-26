@@ -14,7 +14,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.crm.commentmag.TestDatabaseActivity"
+            android:name="com.crm.magazines.MagazineListActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,11 +23,11 @@
             </intent-filter>
         </activity>
          <activity
-            android:name=".SingleListItem"
-            android:label="@string/hello_world"
+            android:name="com.crm.magazines.SingleListItem"
+            android:label="@string/detail_mag"
         ></activity>
          <activity
-            android:name=".NewMag"
+            android:name="com.crm.magazines.MagazineActivity"
             android:label="@string/new_mag"
         ></activity>
     </application>
