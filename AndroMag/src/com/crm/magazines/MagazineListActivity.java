@@ -20,9 +20,11 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-enum codeRequetes{AJOUTER_MAGAZINE,DETAIL_COMMENTAIRE,MASQUER_MAGAZINE};
+
 
 public class MagazineListActivity extends ListActivity {
+
+	enum codeRequetes{AJOUTER_MAGAZINE,DETAIL_COMMENTAIRE,MASQUER_MAGAZINE};
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
