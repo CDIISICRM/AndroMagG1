@@ -4,7 +4,6 @@ import java.util.List;
 
 import com.crm.commentmag.*;
 
-import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,32 +19,24 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+enum codeRequetes{AJOUTER_MAGAZINE,DETAIL_COMMENTAIRE,MASQUER_MAGAZINE};
 
+public class TestDatabaseActivity extends ListActivity {
 
-public class MagazineListActivity extends ListActivity {
-	enum codeRequetes{AJOUTER_MAGAZINE,DETAIL_COMMENTAIRE,MASQUER_MAGAZINE};
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);	
 		setContentView(R.layout.activity_test_database);
 		MagazineDBhelper dbhelper = new MagazineDBhelper(this);
-		final List<Magazine> values = dbhelper.getAllMagazines();	
-		ArrayAdapter<Magazine> adapter = new ArrayAdapter<Magazine>(MagazineListActivity.this,android.R.layout.simple_list_item_1, values);
+		List<Magazine> values = dbhelper.getAllMagazines();	
+		ArrayAdapter<Magazine> adapter = new ArrayAdapter<Magazine>(TestDatabaseActivity.this,android.R.layout.simple_list_item_1, values);
 		setListAdapter(adapter);
 		ListView listview = getListView();
 		listview.setOnItemClickListener(new OnItemClickListener() {
-		Magazine leMagazine = new Magazine();
-	          public void onItemClick(AdapterView<?> parent, View view,
-	                  int position, long id) {  
-	        	  String magazine = ((TextView) view).getText().toString();
-	        	  		for(Magazine unMagazine : values){
-	        	  			if(unMagazine.getNom().equals(magazine)){
-	        	  				leMagazine = unMagazine;
-	        	  			}
-	        	  		}                
-	                  
+	          public void onItemClick(AdapterView<?> parent, View view, int position, long id) {                   
+	                  String magazine = ((TextView) view).getText().toString();
 	                  Intent i = new Intent(getApplicationContext(), SingleListItem.class);
-	                  i.putExtra(Magazine.TABLE_MAGAZINE, leMagazine);
+	                  i.putExtra("magazine", magazine);
 	                  startActivity(i);
 	              }
 	            });
@@ -55,9 +46,14 @@ public class MagazineListActivity extends ListActivity {
 	public void onClick(View view) {
 		switch (view.getId()) {
 		case R.id.add:
-			 Intent ajoutMag = new Intent(this, MagazineActivity.class);  
+			 Intent ajoutMag = new Intent(this, MagazineActivity.class);
+		  
              startActivityForResult(ajoutMag,codeRequetes.AJOUTER_MAGAZINE.ordinal());
              
+             //	startActivityForResult(new Intent(this,NewMag.class), codeRequetes.AJOUTER_MAGAZINE.ordinal());
+        
+             //		String[] comments = new String[] { "Cool", "Very nice", "Hate it" };			int nextInt = new Random().nextInt(3);
+			// 		comment = datasource.createComment(comments[nextInt]);			adapter.add(comment);		
              break;
 		
 		case R.id.buttonValiderMagazine:
@@ -70,9 +66,14 @@ public class MagazineListActivity extends ListActivity {
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
 	      if(resultCode==RESULT_OK && requestCode==codeRequetes.AJOUTER_MAGAZINE.ordinal()){
+	    	
+	    	  
+	    	       
+	    	    //    String breweryID = 
+	    	        final String MAGAZINE = "magazine";
 	    	        Bundle extras = data.getExtras();
-	    	    Magazine magazine = extras.getParcelable(Magazine.TABLE_MAGAZINE);
-	    		MagazineDBhelper dbhelper = new MagazineDBhelper(MagazineListActivity.this);
+	    	    Magazine magazine = extras.getParcelable(MAGAZINE);
+	    		MagazineDBhelper dbhelper = new MagazineDBhelper(TestDatabaseActivity.this);
 	    		dbhelper.createMagazine(magazine);
 	    		@SuppressWarnings("unchecked")
 				ArrayAdapter<Magazine> adapter = (ArrayAdapter<Magazine>) getListAdapter();

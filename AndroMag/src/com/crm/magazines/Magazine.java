@@ -9,6 +9,8 @@ import android.content.Context;
 import android.database.Cursor;
 import android.os.Parcel;
 import android.os.Parcelable;
+import static java.util.Calendar.*;
+
 
 public class Magazine  implements Parcelable {
 
@@ -19,7 +21,7 @@ public class Magazine  implements Parcelable {
 	    private Boolean visible;	
 		private List<Theme> themes = new ArrayList<Theme>(4);
 		
-		public enum Theme  {	Jardin,Musique,Maison,TV};
+		public enum Theme  {Jardin,Musique,Maison,TV};
 		
 	
 		
@@ -59,8 +61,11 @@ public class Magazine  implements Parcelable {
 	public void setdateDInscription(String dateDInscription){	this.dateDInscription=dateDInscription;		}
 	public void setdateDInscription(){
 		Calendar c = Calendar.getInstance(); c.setTime(new Date());
-		String mois = c.getDisplayName(java.util.Calendar.MONTH, java.util.Calendar.LONG, Locale.FRANCE);	
-		String  datedujour =  c.get(Calendar.DAY_OF_MONTH) + " " + mois + " " + c.get(Calendar.YEAR);
+		int date = c.get(DAY_OF_MONTH);
+		int mois = c.get(MONTH)+1;	
+		String  datedujour= date + "/" + mois + "/" +c.get(Calendar.YEAR);// c.get(Calendar.DAY_OF_MONTH) + " /" + mois + " /" + c.get(Calendar.YEAR);
+		
+		
 		this.dateDInscription=datedujour;
 		}
 	
@@ -84,13 +89,14 @@ public class Magazine  implements Parcelable {
 	public void writeToParcel(Parcel dest, int flags) {
 	      dest.writeString(nom);
 	      dest.writeFloat(prix);
+
 	      dest.writeInt(visible ? 1 : 0);    	      
 	      List<String> themestrings = new ArrayList<String>();
 	      for (Theme theme : themes){
 				themestrings.add(theme.name());
 			}
 			dest.writeStringList(themestrings);
-		    dest.writeString(dateDInscription);
+			  dest.writeString(dateDInscription);
 	}	
 	public static final Creator<Magazine> CREATOR= new Creator<Magazine>() {		 
 		  public Magazine createFromParcel(Parcel in) {
@@ -104,7 +110,7 @@ public class Magazine  implements Parcelable {
 			for (String themestring : themestrings){
 				magazine.themes.add(Theme.valueOf(themestring));		
 			}
-			magazine.dateDInscription = new Date(in.readLong()).toString();
+			magazine.dateDInscription = in.readString();
 				 return magazine;
 		  }
 		  	@Override

@@ -22,14 +22,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-         <activity
+        <activity
             android:name="com.crm.magazines.SingleListItem"
-            android:label="@string/detail_mag"
-        ></activity>
-         <activity
+            android:label="@string/detail_mag" >
+        </activity>
+        <activity
             android:name="com.crm.magazines.MagazineActivity"
-            android:label="@string/new_mag"
-        ></activity>
+            android:label="@string/new_mag" >
+        </activity>
+        <activity
+            android:name="com.crm.commentaires.CommentairesActivity"
+            android:label="@string/title_activity_commentaires" >
+        </activity>
     </application>
 
 </manifest>

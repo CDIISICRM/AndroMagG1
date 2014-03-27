@@ -29,7 +29,9 @@ public class MagazineDBhelper
 		}
 		catch(Exception e)
 		{
-		String s = e.toString();
+			String s;
+		s = e.toString();
+		s="";
 		}
 	}
 
@@ -43,7 +45,6 @@ public class MagazineDBhelper
 			Magazine magazine = new Magazine();
 			magazine.setNom(mags[n][0]);
 			magazine.setPrix(Float.valueOf(mags[n][1]));
-			magazine.setdateDInscription(new Date().toString());
 			magazine.AddTheme(Theme.Jardin);	
 			
 			this.createMagazine(magazine);
@@ -69,7 +70,6 @@ public class MagazineDBhelper
 	        values.put(Magazine.COLUMN_DATEDINSCRIPTION,  magazine.getDateDInscription());
 	        values.put(Magazine.COLUMN_VISIBLE, 1);
 	        values.put(Magazine.COLUMN_THEMES, magazine.getThemes());
-	 
 	        long insertId = database.insert(Magazine.TABLE_MAGAZINE, null,values);
 	        Cursor cursor = database.query(Magazine.TABLE_MAGAZINE,Magazine.allColumns, Magazine.COLUMN_ID + " = " + insertId, null, null, null, null);
 	        cursor.moveToFirst();
