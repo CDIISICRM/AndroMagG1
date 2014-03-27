@@ -28,42 +28,12 @@ public class SingleListItem extends Activity{
        nom_magazine.setText(magazine.getDateDInscription());
         prix_magazine.setText(String.valueOf(magazine.getPrix())+" €");
         
-		Button oui = (Button)findViewById(R.id.commenter);
-		Button non = (Button)findViewById(R.id.retour);
-		Button jamais = (Button)findViewById(R.id.masquer);
-		
-		oui.setOnClickListener(new OnClickListener(){
-			@Override
-			public void onClick(View v) {
-				Intent intent = new Intent(v.getContext(), com.crm.commentaires.CommentairesActivity.class);
-				startActivity(intent);
-			}
-	    	
-	    });	
-		/*
-		non.setOnClickListener(new OnClickListener(){
-			@Override
-			public void onClick(View v) {
-				Intent data;
 			
-	       //      startActivityForResult(ajoutMag,codeRequetes.AJOUTER_MAGAZINE.ordinal());
-	        
-		        //	data = new Intent(this,MagazineListActivity.class);
-			//	Intent intent = new Intent(v.getContext(), com.crm.magazines.TestDatabaseActivity.class);
-				startActivity(data);
-				
-			}
-	    	
-	    });*/
 		
-		jamais.setOnClickListener(new OnClickListener(){
-			@Override
-			public void onClick(View v) {
-				
-				Intent intent = new Intent(v.getContext(), com.crm.magazines.TestDatabaseActivity.class);
-				startActivity(intent);
-			}
-	    	
-	    });	
     }
+    
+    public void onRetour(View v){
+		Intent i=new Intent(v.getContext(),MagazineListActivity.class);
+		startActivity(i);
+	}
 }

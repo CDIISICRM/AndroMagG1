@@ -66,5 +66,10 @@ public class MagazineActivity extends Activity {
     		}    
     }
 	
+	public void onAnnuler(View v){
+		Intent i=new Intent(v.getContext(),MagazineListActivity.class);
+		startActivity(i);
+	}
+	
 
 }
