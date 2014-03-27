@@ -31,29 +31,35 @@
 
     <LinearLayout
         android:id="@+id/group"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content" >
 
         <Button
             android:id="@+id/commenter"
-            android:layout_width="120dp"
+            android:layout_width="0dip"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="0dp"
+            android:textSize="15sp"
             android:text="commenter" />
 
         <Button
             android:id="@+id/retour"
-            android:layout_width="120dp"
+            android:layout_width="0dip"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="0dp"
             android:onClick="onRetour"
+            android:textSize="15sp"
             android:text="retour" />        
         
         <Button
             android:id="@+id/masquer"
-            android:layout_width="120dp"
+            android:layout_width="0dip"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="0dp"
+            android:textSize="15sp"
             android:text="masquer" />
     </LinearLayout>
 
