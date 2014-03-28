@@ -36,4 +36,10 @@ public class SingleListItem extends Activity{
 		Intent i=new Intent(v.getContext(),MagazineListActivity.class);
 		startActivity(i);
 	}
+    public void onCommenter(View v){
+		Intent i=new Intent(v.getContext(),com.crm.commentaires.CommentairesActivity.class);
+		startActivity(i);
+	}
+
+    
 }

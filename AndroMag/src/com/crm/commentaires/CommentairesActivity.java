@@ -21,7 +21,7 @@ public class CommentairesActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_commentaires);
+		setContentView(R.layout.activity_new_commentaire);
 
 		if (savedInstanceState == null) {
 			getFragmentManager().beginTransaction()
@@ -58,10 +58,8 @@ public class CommentairesActivity extends Activity {
 		}
 
 		@Override
-		public View onCreateView(LayoutInflater inflater, ViewGroup container,
-				Bundle savedInstanceState) {
-			View rootView = inflater.inflate(R.layout.fragment_commentaires,
-					container, false);
+		public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
+			View rootView = inflater.inflate(R.layout.fragment_commentaires,container, false);
 			return rootView;
 		}
 	}

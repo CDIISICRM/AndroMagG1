@@ -27,42 +27,52 @@ public final class R {
     }
     public static final class drawable {
         public static final int ic_launcher=0x7f020000;
+        public static final int ic_launcher2=0x7f020001;
     }
     public static final class id {
-        public static final int EditNomMag=0x7f080004;
-        public static final int EditPrixMag=0x7f080005;
-        public static final int action_settings=0x7f080015;
-        public static final int add=0x7f080001;
-        public static final int buttonAnnulerMagazine=0x7f08000a;
-        public static final int buttonValiderMagazine=0x7f08000b;
-        public static final int checkBoxJardin=0x7f080008;
-        public static final int checkBoxMaison=0x7f080006;
-        public static final int checkBoxMusique=0x7f080009;
-        public static final int checkBoxTV=0x7f08000c;
-        public static final int commenter=0x7f080012;
+        public static final int EditNomMag=0x7f08000b;
+        public static final int EditNomRubrique=0x7f080003;
+        public static final int EditNumero=0x7f080004;
+        public static final int EditPrixMag=0x7f08000e;
+        public static final int action_settings=0x7f08001d;
+        public static final int add=0x7f080008;
+        public static final int buttonAnnulerMagazine=0x7f080016;
+        public static final int buttonValiderMagazine=0x7f080015;
+        public static final int checkBoxJardin=0x7f08000f;
+        public static final int checkBoxMaison=0x7f080010;
+        public static final int checkBoxMusique=0x7f080012;
+        public static final int checkBoxTV=0x7f080013;
+        public static final int commenter=0x7f08001a;
         public static final int container=0x7f080000;
-        public static final int expandableListComments=0x7f080010;
-        public static final int group=0x7f080011;
-        public static final int itemcomment=0x7f080002;
-        public static final int label=0x7f080003;
-        public static final int masquer=0x7f080014;
-        public static final int nom_magazine=0x7f08000e;
-        public static final int prix_magazine=0x7f08000f;
-        public static final int retour=0x7f080013;
-        public static final int textViewPrix=0x7f080007;
-        public static final int textViewTheme=0x7f08000d;
+        public static final int expandableListComments=0x7f080019;
+        public static final int group=0x7f080014;
+        public static final int group2=0x7f08000c;
+        public static final int itemcomment=0x7f080009;
+        public static final int label=0x7f08000a;
+        public static final int masquer=0x7f08001c;
+        public static final int nom_magazine=0x7f080017;
+        public static final int nom_rubrique=0x7f080002;
+        public static final int note=0x7f080006;
+        public static final int numero=0x7f080005;
+        public static final int prix_magazine=0x7f080018;
+        public static final int retour=0x7f08001b;
+        public static final int rubrique=0x7f080001;
+        public static final int textViewPrix=0x7f08000d;
+        public static final int textViewTheme=0x7f080011;
+        public static final int texte=0x7f080007;
     }
     public static final class layout {
         public static final int activity_commentaires=0x7f030000;
         public static final int activity_main=0x7f030001;
-        public static final int activity_test_database=0x7f030002;
-        public static final int comments_list_view=0x7f030003;
-        public static final int fragment_commentaires=0x7f030004;
-        public static final int fragment_main=0x7f030005;
-        public static final int fragment_test_database=0x7f030006;
-        public static final int list_item=0x7f030007;
-        public static final int new_mag_view=0x7f030008;
-        public static final int single_list_item_view=0x7f030009;
+        public static final int activity_new_commentaire=0x7f030002;
+        public static final int activity_test_database=0x7f030003;
+        public static final int comments_list_view=0x7f030004;
+        public static final int fragment_commentaires=0x7f030005;
+        public static final int fragment_main=0x7f030006;
+        public static final int fragment_test_database=0x7f030007;
+        public static final int list_item=0x7f030008;
+        public static final int new_mag_view=0x7f030009;
+        public static final int single_list_item_view=0x7f03000a;
     }
     public static final class menu {
         public static final int commentaires=0x7f070000;
