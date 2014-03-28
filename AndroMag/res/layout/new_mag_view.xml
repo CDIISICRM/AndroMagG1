@@ -4,6 +4,9 @@
     android:layout_height="wrap_content"
     android:orientation="vertical" >
     
+    
+    <!-- Nom du magazine -->
+    
     <EditText
         android:id="@+id/EditNomMag"
         android:layout_width="wrap_content"
@@ -12,90 +15,58 @@
         android:layout_alignParentTop="true"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="17dp"
+        android:layout_marginBottom="8dp"
         android:ems="10"
         android:hint="@string/nom_mag"
         android:inputType="text" >
         <requestFocus />
     </EditText>
 
-
+    <!-- Prix du magazine -->
     
-    
-  <TextView
-     android:id="@+id/textViewPrix"
-     android:layout_width="wrap_content"
+<LinearLayout
+     android:id="@+id/group2"
+     android:layout_width="fill_parent"
      android:layout_height="wrap_content"
-     android:layout_alignBaseline="@+id/EditPrixMag"
-     android:layout_alignBottom="@+id/EditPrixMag"
-     android:layout_alignRight="@+id/checkBoxJardin"
-     android:layout_marginRight="19dp"
-     android:text="@string/prix" />    
+     android:layout_alignParentBottom="true"
+     android:layout_alignParentLeft="true" >
     
-    
- <EditText
-     android:id="@+id/EditPrixMag"
-     android:layout_width="wrap_content"
-     android:layout_height="wrap_content"
-     android:layout_alignRight="@+id/EditNomMag"
-     android:layout_below="@+id/EditNomMag"
-     android:layout_toRightOf="@+id/checkBoxMaison"
-     android:ems="10"
-     android:inputType="numberSigned" />
 
-  
- <!--      
+	  <TextView
+	     android:id="@+id/textViewPrix"
+	     android:layout_width="wrap_content"
+	     android:layout_height="wrap_content"
+	     android:layout_alignBaseline="@+id/EditPrixMag"
+	     android:layout_alignBottom="@+id/EditPrixMag"
+	     android:layout_alignRight="@+id/checkBoxJardin"
+	     android:layout_marginRight="19dp"
+	     android:text="@string/prix" />    
+	     
+	    
+	    
+	 <EditText
+	     android:id="@+id/EditPrixMag"
+	     android:layout_width="wrap_content"
+	     android:layout_height="wrap_content"
+	     android:layout_alignRight="@+id/EditNomMag"
+	     android:layout_below="@+id/EditNomMag"
+	     android:layout_toRightOf="@+id/checkBoxMaison"
+	     android:ems="10"
+	     android:inputType="numberSigned" />
  
-    <CheckBox
-        android:id="@+id/checkBoxMaison"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/EditNomMag"
-        android:layout_below="@+id/checkBoxMusique"
-        android:layout_marginLeft="15dp"
-        android:text="@string/maison" />
+ </LinearLayout>
 
-    <CheckBox
-        android:id="@+id/checkBoxJardin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="66dp"
-        android:text="@string/jardin" />
-
-    <CheckBox
-        android:id="@+id/checkBoxMusique"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/musique" />
-
-    <CheckBox
-        android:id="@+id/checkBoxTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/checkBoxMaison"
-        android:layout_alignBottom="@+id/checkBoxMaison"
-        android:layout_alignLeft="@+id/checkBoxMusique"
-        android:text="@string/TV" />
- 
- 
- -->
- 
- 
- 
- 
- 
-
-
- 
    <TextView
      android:id="@+id/textViewTheme"
      android:layout_width="wrap_content"
      android:layout_height="wrap_content"
      android:layout_above="@+id/checkBoxJardin"
      android:layout_alignLeft="@+id/EditNomMag"
-     android:layout_marginBottom="34dp"
+     android:layout_marginBottom="8dp"
      android:text="@string/theme" />   
  
- 
+ <!-- Themes du magazine -->
+   
   <LinearLayout
      android:id="@+id/group2"
      android:layout_width="fill_parent"
@@ -123,8 +94,17 @@
         android:text="@string/jardin" 
         android:textSize="10sp" />
                   
-
-    <CheckBox
+      
+  </LinearLayout>
+  
+  <LinearLayout
+     android:id="@+id/group2"
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content"
+     android:layout_alignParentBottom="true"
+     android:layout_alignParentLeft="true" >
+    
+      <CheckBox
         android:id="@+id/checkBoxMusique"
         android:layout_width="0dip"
         android:layout_weight="1"
@@ -140,16 +120,11 @@
         android:layout_height="wrap_content"
         android:text="@string/TV"
         android:textSize="10sp"/>
-                     
-
     
-      
-
-      
-      
-      
-  </LinearLayout>
+    </LinearLayout>
  
+  <!-- Boutons -->
+  
  <LinearLayout
      android:id="@+id/group"
      android:layout_width="fill_parent"
