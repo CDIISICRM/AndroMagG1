@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CommentMag</string>
+    <string name="hello_world">Hello World !</string>
+    <string name="hello">Hello</string>
+    <string name="action_settings">Settings</string>
+    
+    <string name="addMag">Ajouter un nouveau magazine</string>
+    <string name="ajouterUnMagazine">Ajouter un magazine</string>
+	<string name="valider">Enregistrer</string>
+    <string name="name">Nom:</string>
+    <string name="nom_mag">Nom du magazine</string>
+    <string name="prix">Prix:</string>
+    <string name="rate">Niveau:</string>
+    
+    <string name="commentaire">Commentaire:</string>
+    <string name="rubrique">Rubrique</string>
+    <string name="numero">numéro</string>
+    <string name="note">Note:</string>
+     
+    <string name="text_comment">votre commentaire</string>
+    <string name="annuler">Annuler</string>
+    <string name="commenter">commenter</string>
+    <string name="retour">retour</string>
+    
+    <string name="theme">Theme</string>
+    <string name="musique">musique</string>
+    <string name="TV">TV</string>
+    <string name="maison">maison</string>
+    <string name="jardin">jardin</string>
+
+    <string name="edit">Edit</string>    
+    <string name="article">Article</string>
+    <string name="page">Page</string>
+    <string name="niveau">Niveau</string>
+    <string name="edition">edition</string>
+    
+
+    <string name="NewMagazineActivity">Nouveau Magazine</string>
+    <string name="CommentaireListActivity">Liste de commentaires</string>
+    <string name="MagazineListActivity">CommentaireActivity</string>
+    <string name="NewCommentaireActivity">Nouveau Commentaire</string> 
+</resources>

@@ -1,0 +1,82 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+
+      <TextView
+         android:id="@+id/newcomment_labelrubrique"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_weight="1"
+         android:text="@string/rubrique" />
+    <EditText
+        android:id="@+id/newcomment_rubrique"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+android:layout_weight="1"
+        android:layout_marginRight="45dp"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:hint="@string/rubrique"
+        android:inputType="text" /> 
+     <TextView
+                 android:ems="10"
+        android:id="@+id/newcomment_labelnumero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+android:layout_weight="1"
+        android:layout_marginBottom="21dp"
+        android:text="@string/numero" />
+
+    <EditText
+        android:layout_weight="1"
+                android:ems="10"
+        android:id="@+id/newcomment_numero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:inputType="numberSigned" />
+    
+    <RatingBar
+        android:layout_weight="1"
+                android:ems="10"
+        android:id="@+id/newcomment_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="73dp" />
+
+    
+    <TextView
+        android:id="@+id/newcomment_labeltexte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+android:layout_weight="1"
+        android:layout_marginBottom="36dp"
+        android:ems="10"
+        android:text="@string/commentaire" />
+
+    
+    <EditText
+        android:id="@+id/newcomment_commentaire"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+android:layout_weight="1"
+        android:layout_marginBottom="88dp"
+        android:ems="10"
+        android:inputType="textMultiLine" />
+    
+    
+    <Button
+        android:layout_weight="1"
+                android:ems="10"
+        android:id="@+id/newcomment_ValiderCommentaire"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/valider"
+        android:onClick="onValider" />
+
+        <requestFocus />
+   
+</LinearLayout>
